@@ -30,6 +30,7 @@ module.exports = function toReadable(number) {
                     .map(item => item === 'threety' ? 'thirty' : item)
                     .map(item => item === 'twoty' ? 'twenty' : item)
                     .map(item => item === 'fivety' ? 'fifty' : item)
+                    .map(item => item === 'eightty' ? 'eighty' : item)
                     .join(' ');
 
   const secondConvert = (string) => {
