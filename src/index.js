@@ -26,6 +26,7 @@ module.exports = function toReadable(number) {
 
   let arr = number.toString().split('')
                     .map((item, i) => i === 0 ? digitToWord(item) + ' hundred' : i === 1 ? digitToWord(item) + 'ty' : digitToWord(item))
+                    .map(item => item === 'fourty' ? 'forty' : item)
                     .map(item => item === 'threety' ? 'thirty' : item)
                     .map(item => item === 'twoty' ? 'twenty' : item)
                     .map(item => item === 'fivety' ? 'fifty' : item)
